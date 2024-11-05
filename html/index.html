@@ -47,5 +47,62 @@
     <div class="logo text-center">
         <img src="../media/cubulis.png" alt="Logo de la Empresa">
     </div>
+    <!-- Modal de Sobre Nosotros -->
+    <div class="modal fade" id="sobreNosotrosModal" tabindex="-1" aria-labelledby="sobreNosotrosLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sobreNosotrosLabel">Sobre Nosotros</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Soy Ulises Sarto, tengo 15 años y este es mi segundo curso que hago en Coderhouse, el primero fue de Python y como segui interesado por el tema del html, decidi seguir con este curso de desarrollo web. Desde chico que me interesan las computadoras y después de terminar la secundaria, me gustaría estudiar ingenieria en sistemas, ya que vi las materias y todas me parecieron interesantes. Eso es un poco de mi historia 👌</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Contacto -->
+    <div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="contactoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactoLabel">Contacto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Tu correo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr><br>
+            <!--barra de busqueda-->
+            <div class="container text-center">
+              <div class="search-container">
+                  <input type="text" class="search-input" placeholder="Buscar...">
+                  <button class="search-button">🔍</button>
+              </div>
+          </div>
 </body>
 </html>
