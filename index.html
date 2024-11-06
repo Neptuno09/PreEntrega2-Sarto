@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="./css/styles.css" rel="stylesheet">
+    <title>Página asd</title>
+    <script src="https://kit.fontawesome.com/c1b6c8221c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="./media/logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+            </a>
+    
+            <!-- Botón de hamburguesa para pantallas pequeñas -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Menú de navegación (se colapsa en pantallas pequeñas) -->
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <!-- Dropdown de "Todos los productos" -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            Todos los productos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">2x2</a></li>
+                            <li><a class="dropdown-item" href="#">3x3</a></li>
+                            <li><a class="dropdown-item" href="#">Pirámides</a></li>
+                            <li><a class="dropdown-item" href="#">Cuboides</a></li>
+                            <li><a class="dropdown-item" href="#">Otros puzzles</a></li>
+                        </ul>
+                    </li>
+                </ul>
+    
+                <!-- Elementos alineados a la derecha -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#sobreNosotrosModal">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactoModal">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <br>
+    <div class="container text-center py-3">
+        <img class="logo" src="./media/Cubulis.png" alt="Logo de la Empresa">
+    </div>
+    <h1>MALE ES RE TOSIADA</h1>
+    <!-- Modal de Sobre Nosotros -->
+    <div class="modal fade" id="sobreNosotrosModal" tabindex="-1" aria-labelledby="sobreNosotrosLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sobreNosotrosLabel">Sobre Nosotros</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Soy Ulises Sarto, tengo 15 años y este es mi segundo curso que hago en Coderhouse, el primero fue de Python y como segui interesado por el tema del html, decidi seguir con este curso de desarrollo web. Desde chico que me interesan las computadoras y después de terminar la secundaria, me gustaría estudiar ingenieria en sistemas, ya que vi las materias y todas me parecieron interesantes. Eso es un poco de mi historia 👌</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de Contacto -->
+    <div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="contactoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactoLabel">Contacto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Tu correo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+            <!--barra de busqueda-->
+            <div class="container py-3">
+              <div class="search-container d-flex justify-content-center">
+                  <input type="text" class="search-input form-control w-100" placeholder="Buscar...">
+                  <button class="search-button btn btn-danger ml-2">🔍</button>
+              </div>
+          </div>
+          <div class="product-grid">
+            <a href="https://example.com/product1" class="product-card">
+                <img src="./media/gan356rs.jpg" alt="Product 1" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">GAN 356 R S</h3>
+                    <p class="product-price">$10.99</p>
+                </div>
+            </a>
+      
+            <a href="https://example.com/product2" class="product-card">
+                <img src="./media/hasbrocube.png" alt="Product 2" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Cubo Rubik Hasbro</h3>
+                    <p class="product-price">$12.99</p>
+                </div>
+            </a>
+      
+            <a href="https://example.com/product3" class="product-card">
+                <img src="./media/speedcube.jpg" alt="Product 3" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Rubik's Speedcube</h3>
+                    <p class="product-price">$15.99</p>
+                </div>
+            </a>
+      
+            <a href="https://example.com/product3" class="product-card">
+                <img src="./media/no-image.jpg" alt="Product 3" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">placeholder</h3>
+                    <p class="product-price">$15.99</p>
+                </div>
+            </a>
+            <a href="https://example.com/product3" class="product-card">
+                <img src="./media/no-image.jpg" alt="Product 3" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">placeholder</h3>
+                    <p class="product-price">$15.99</p>
+                </div>
+            </a>
+            <a href="https://example.com/product3" class="product-card">
+                <img src="./media/no-image.jpg" alt="Product 3" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">placeholder</h3>
+                    <p class="product-price">$15.99</p>
+                </div>
+            </a>
+            <a href="https://example.com/product3" class="product-card">
+                <img src="./media/no-image.jpg" alt="Product 3" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">placeholder</h3>
+                    <p class="product-price">$15.99</p>
+                </div>
+            </a>
+            <a href="https://example.com/product3" class="product-card">
+                <img src="./media/no-image.jpg" alt="Product 3" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">placeholder</h3>
+                    <p class="product-price">$15.99</p>
+                </div>
+            </a>
+            <a href="https://example.com/product3" class="product-card">
+                <img src="./media/no-image.jpg" alt="Product 3" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">placeholder</h3>
+                    <p class="product-price">$15.99</p>
+                </div>
+            </a>
+            <a href="https://example.com/product3" class="product-card">
+                <img src="./media/no-image.jpg" alt="Product 3" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">placeholder</h3>
+                    <p class="product-price">$15.99</p>
+                </div>
+            </a>
+      
+            
+        </div>
+        <footer class="bg-dark text-white pt-5 pb-4">
+            <div class="container text-center text-md-start">
+                <div class="row">
+                    <!-- Logo y descripción -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold">Cubulis</h5>
+                        <p>Somos una empresa dedicada a ofrecer los mejores productos y servicios a nuestros clientes, garantizando siempre calidad y satisfacción.</p>
+                    </div>
+    
+                    <!-- Información de contacto -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold">Contacto</h5>
+                        <p><i class="fas fa-home me-3"></i> Calle Falsa 123, Ciudad, País</p>
+                        <p><i class="fas fa-envelope me-3"></i> correo@ejemplo.com</p>
+                        <p><i class="fas fa-phone me-3"></i> +123 456 7890</p>
+                        <p><i class="fas fa-print me-3"></i> +123 456 7891</p>
+                    </div>
+    
+                    <!-- Enlaces rápidos -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold">Enlaces</h5>
+                        <p><a href="#" class="text-white text-decoration-none">Inicio</a></p>
+                        <p><a href="#" class="text-white text-decoration-none">Productos</a></p>
+                        <p><a href="#" class="text-white text-decoration-none">Servicios</a></p>
+                        <p><a href="#" class="text-white text-decoration-none">Acerca de nosotros</a></p>
+                        <p><a href="#" class="text-white text-decoration-none">Contacto</a></p>
+                    </div>
+    
+                    <!-- Redes Sociales -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold">Síguenos</h5>
+                        <a href="#" class="text-white me-4"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-4"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-4"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-4"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+    
+                <hr class="mb-4">
+                <!-- Derechos de autor -->
+                <div class="row align-items-center">
+                    <div class="col-md-7 col-lg-8">
+                        <p class="text-center text-md-start">© 2024 Derechos reservados: 
+                            <a href="#" class="text-white text-decoration-none">cubulis.com</a>
+                        </p>
+                    </div>
+                    <div class="col-md-5 col-lg-4">
+                      <p class="text-center text-md-end">Diseñado por Ulises Sarto</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
