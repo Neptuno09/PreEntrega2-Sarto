@@ -88,3 +88,64 @@
     font-size: 16px;
     color: #888;
 }
+
+@media (max-width: 576px) {
+    .search-container {
+        width: 100%;  /* La barra de búsqueda ocupará todo el ancho en pantallas pequeñas */
+        max-width: none;  /* El límite de ancho se elimina */
+        flex-direction: column;  /* Los elementos se apilan en una columna */
+        text-align: left;
+    }
+
+    .search-input {
+        width: 100%;  /* El input de búsqueda también ocupará todo el ancho */
+        margin-bottom: 10px;  /* Un pequeño margen inferior */
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);  /* Mostrar 2 productos por fila */
+        padding: 1rem;  /* Reducir el padding */
+    }
+
+    .product-card {
+        margin: 0;  /* Eliminar márgenes */
+    }
+
+    .product-title {
+        font-size: 16px;  /* Reducir tamaño de fuente en títulos */
+    }
+
+    .product-price {
+        font-size: 14px;  /* Reducir tamaño de fuente en precios */
+    }
+
+    .no-image {
+        height: 120px;  /* Reducir altura de la imagen de reemplazo */
+    }
+}
+
+/* Media Query para dispositivos medianos (tabletas) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .search-container {
+        width: 80%;  /* La barra de búsqueda ocupa el 80% del ancho */
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);  /* Mostrar 3 productos por fila */
+    }
+
+    .product-title {
+        font-size: 17px;  /* Reducir tamaño de fuente en títulos */
+    }
+
+    .product-price {
+        font-size: 15px;  /* Reducir tamaño de fuente en precios */
+    }
+}
+
+/* Media Query para dispositivos grandes (pantallas de escritorio) */
+@media (min-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(5, 1fr);  /* Mostrar 5 productos por fila */
+    }
+}
