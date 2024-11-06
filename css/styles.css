@@ -3,23 +3,24 @@
 }
 
 .search-container {
-    display: inline-flex;
+    max-width: 600px; /* Limitar el ancho máximo para pantallas grandes */
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+    display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+    margin: 0 auto;
     border-radius: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/* Ancho ajustado al contenido */
     overflow: hidden;
-    max-width: 200;
-    margin: 20px auto;
-    text-align: center;
+    
 }
 
 .search-input {
     border: none;
     padding: 10px 15px;
     font-size: 16px;
-    width: 400px; /* Ancho definido */
     outline: none;
+    flex-grow: 1; /* Hace que la barra de búsqueda ocupe el espacio disponible */
 }
 
 .search-button {
@@ -31,8 +32,9 @@
     transition: background-color 0.3s;
 }
 
+
 .search-button:hover {
-    background-color: #0056b3;
+    background-color: #e44848;
 }
 
 .product-grid {
@@ -89,17 +91,35 @@
     color: #888;
 }
 
+/* Estilo inicial del logo */
+.logo {
+    width: 500px;
+    height: auto;
+    transition: width 0.3s ease;  /* Transición suave al cambiar el tamaño */
+}
+
+.navbar .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    z-index: 1050; /* Asegúrate que el dropdown esté por encima de otros elementos */
+    left: 0;
+    right: 0;
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
 @media (max-width: 576px) {
     .search-container {
-        width: 100%;  /* La barra de búsqueda ocupará todo el ancho en pantallas pequeñas */
-        max-width: none;  /* El límite de ancho se elimina */
-        flex-direction: column;  /* Los elementos se apilan en una columna */
-        text-align: left;
+        flex-direction: rown; /* Coloca el campo de búsqueda y el botón uno debajo del otro */
+        align-items: stretch;  /* Asegura que el input y el botón ocupen todo el ancho */
     }
-
+    .search-button {
+        width: 15%; /* Hace que el botón ocupe todo el ancho disponible en pantallas pequeñas */
+        margin-top: 10px; /* Agrega un espacio entre el input y el botón */
+    }
     .search-input {
-        width: 100%;  /* El input de búsqueda también ocupará todo el ancho */
-        margin-bottom: 10px;  /* Un pequeño margen inferior */
+        width: 70%; /* Hace que el input ocupe todo el ancho disponible en pantallas pequeñas */
     }
 
     .product-grid {
@@ -122,6 +142,9 @@
     .no-image {
         height: 120px;  /* Reducir altura de la imagen de reemplazo */
     }
+    .logo {
+        width: 120px;
+    }
 }
 
 /* Media Query para dispositivos medianos (tabletas) */
@@ -141,11 +164,17 @@
     .product-price {
         font-size: 15px;  /* Reducir tamaño de fuente en precios */
     }
+    .logo {
+        width: 160px;
+    }
 }
 
 /* Media Query para dispositivos grandes (pantallas de escritorio) */
 @media (min-width: 1200px) {
     .product-grid {
         grid-template-columns: repeat(5, 1fr);  /* Mostrar 5 productos por fila */
+    }
+    .logo {
+        width: 250px;
     }
 }

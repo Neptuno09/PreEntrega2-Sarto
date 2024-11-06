@@ -12,7 +12,17 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="../media/logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill"></a>
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="../media/logo.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+            </a>
+    
+            <!-- Botón de hamburguesa para pantallas pequeñas -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Menú de navegación (se colapsa en pantallas pequeñas) -->
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                     <!-- Dropdown de "Todos los productos" -->
@@ -29,24 +39,25 @@
                         </ul>
                     </li>
                 </ul>
+    
                 <!-- Elementos alineados a la derecha -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <!-- Botón que abre el modal de Sobre Nosotros -->
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#sobreNosotrosModal">Sobre nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <!-- Botón que abre el modal de Contacto -->
                         <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactoModal">Contacto</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    
     <br>
-    <div class="logo text-center">
-        <img src="../media/cubulis.png" alt="Logo de la Empresa">
+    <div class="container text-center py-3">
+        <img class="logo" src="../media/cubulis.png" alt="Logo de la Empresa">
     </div>
+    
     <!-- Modal de Sobre Nosotros -->
     <div class="modal fade" id="sobreNosotrosModal" tabindex="-1" aria-labelledby="sobreNosotrosLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -56,7 +67,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Soy Ulises Sarto, tengo 15 años y este es mi segundo curso que hago en Coderhouse, el primero fue de Python y como segui interesado por el tema del html, decidi seguir con este curso de desarrollo web. Desde chico que me interesan las computadoras y después de terminar la secundaria, me gustaría estudiar ingenieria en sistemas, ya que vi las materias y todas me parecieron interesantes. Eso es un poco de mi historia 👌</p>
+                    <p>Soy Ulises Sarto, tengo 15 años y este es mi segundo curso que hago en Coderhouse...</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -64,7 +75,7 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Modal de Contacto -->
     <div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="contactoLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -98,10 +109,10 @@
     </div>
     <hr>
             <!--barra de busqueda-->
-            <div class="container text-center">
-              <div class="search-container">
-                  <input type="text" class="search-input" placeholder="Buscar...">
-                  <button class="search-button">🔍</button>
+            <div class="container py-3">
+              <div class="search-container d-flex justify-content-center">
+                  <input type="text" class="search-input form-control w-100" placeholder="Buscar...">
+                  <button class="search-button btn btn-danger ml-2">🔍</button>
               </div>
           </div>
           <div class="product-grid">
