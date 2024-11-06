@@ -87,21 +87,24 @@
                     <form action="https://formsubmit.co/ulinahsar2@gmail.com" method="POST">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="email" placeholder="Tu correo" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Tu correo" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+                            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
                         </div>
+                        <!-- Campo oculto para evitar el reenvío del correo al cerrar el modal -->
+                        <input type="hidden" name="_next" value="https://tusitio.com/gracias.html"> <!-- Página de agradecimiento -->
+                        <input type="hidden" name="_captcha" value="false"> <!-- Desactivar captcha -->
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary">Enviar correo</button>
+                    <button type="submit" class="btn btn-primary" form="contactoForm">Enviar correo</button> <!-- Asocias el botón de envío con el formulario -->
                 </div>
             </div>
         </div>
