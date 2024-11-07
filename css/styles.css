@@ -116,7 +116,6 @@
     }
     .search-button {
         width: 15%; /* Hace que el botón ocupe todo el ancho disponible en pantallas pequeñas */
-        margin-top: 10px; /* Agrega un espacio entre el input y el botón */
     }
     .search-input {
         width: 70%; /* Hace que el input ocupe todo el ancho disponible en pantallas pequeñas */
